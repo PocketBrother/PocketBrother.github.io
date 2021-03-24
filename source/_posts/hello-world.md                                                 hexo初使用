@@ -1,0 +1,38 @@
+---
+title: hexo 的简单使用
+---
+我是用的是 [Hexo](https://hexo.io/)! 写文章可以参考[文档](https://hexo.io/docs/) ,使用过程中遇到问题可以前往[问题社区](https://hexo.io/docs/troubleshooting.html)寻找答案, 也可以去[GitHub](https://github.com/hexojs/hexo/issues)上进行反馈!
+
+## hexo 的一些基本指令
+
+### 创建一个新文章
+
+``` bash
+$ hexo new "My New Post"
+```
+
+More info: [Writing](https://hexo.io/docs/writing.html)
+
+### 本地部署
+
+``` bash
+$ hexo server
+```
+
+More info: [Server](https://hexo.io/docs/server.html)
+
+### 生产静态文件
+
+``` bash
+$ hexo generate
+```
+
+More info: [Generating](https://hexo.io/docs/generating.html)
+
+### 远程部署
+
+``` bash
+$ hexo deploy
+```
+
+More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
