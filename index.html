@@ -157,6 +157,107 @@
     
     
     <article
+  id="post-判断苹果手机型号"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/08/02/%E5%88%A4%E6%96%AD%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%9E%8B%E5%8F%B7/"
+    >判断苹果手机型号</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/08/02/%E5%88%A4%E6%96%AD%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA%E5%9E%8B%E5%8F%B7/" class="article-date">
+  <time datetime="2021-08-02T10:35:36.000Z" itemprop="datePublished">2021-08-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="工作中所用到的对于-iPhone-各类机型的准确识别"><a href="#工作中所用到的对于-iPhone-各类机型的准确识别" class="headerlink" title="工作中所用到的对于 iPhone 各类机型的准确识别"></a>工作中所用到的对于 iPhone 各类机型的准确识别</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断是否为IOS</span></span><br><span class="line"><span class="keyword">var</span> isIOS =</span><br><span class="line">  /^(iPhone|iPad|iPod|Pike)/gi.test(navigator.platform) ||</span><br><span class="line">  !!userAgent.match(<span class="regexp">/\(i[^;]+;( U;)? CPU.+Mac OS X/</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//判断微信：</span></span><br><span class="line"><span class="keyword">var</span> isWeiXin = <span class="regexp">/MicroMessenger/i</span>.test(navigator.userAgent);</span><br><span class="line"></span><br><span class="line"><span class="comment">//判断安卓：</span></span><br><span class="line"><span class="keyword">var</span> isAndroid = userAgent.indexOf(<span class="string">&quot;Android&quot;</span>) &gt; -<span class="number">1</span> || userAgent.indexOf(<span class="string">&quot;Adr&quot;</span>) &gt; -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//判断PC端：</span></span><br><span class="line"><span class="keyword">var</span> isPC = <span class="regexp">/^(Win)/ig</span>.test(navigator.platform) || userAgent.indexOf(<span class="string">&quot;Windows NT &quot;</span>) &gt; <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//iPhone 6/6s/7/8</span></span><br><span class="line"><span class="keyword">let</span> isIPhone6 =</span><br><span class="line">  /iphone/gi.test(<span class="built_in">window</span>.navigator.userAgent) &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio === <span class="number">3</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.width === <span class="number">375</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.height === <span class="number">667</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//iPhone 6p/6sp/7p</span></span><br><span class="line"><span class="keyword">let</span> isIPhone6p =</span><br><span class="line">  /iphone/gi.test(<span class="built_in">window</span>.navigator.userAgent) &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio === <span class="number">3</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.width === <span class="number">414</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.height === <span class="number">736</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// iPhone X、iPhone XS</span></span><br><span class="line"><span class="keyword">let</span> isIPhoneX =</span><br><span class="line">  /iphone/gi.test(<span class="built_in">window</span>.navigator.userAgent) &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio === <span class="number">3</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.width === <span class="number">375</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.height === <span class="number">812</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// iPhone XS Max</span></span><br><span class="line"><span class="keyword">let</span> isIPhoneXSMax =</span><br><span class="line">  /iphone/gi.test(<span class="built_in">window</span>.navigator.userAgent) &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio === <span class="number">3</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.width === <span class="number">414</span> &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.height === <span class="number">896</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// iPhone XR</span></span><br><span class="line"><span class="keyword">let</span> isIPhoneXR =</span><br><span class="line">  /iphone/gi.test(<span class="built_in">window</span>.navigator.userAgent) &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.devicePixelRatio &amp;&amp;</span><br><span class="line">  (<span class="built_in">window</span>.devicePixelRatio === <span class="number">2</span>) &amp; (<span class="built_in">window</span>.screen.width === <span class="number">414</span>) &amp;&amp;</span><br><span class="line">  <span class="built_in">window</span>.screen.height === <span class="number">896</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(isIPhone6);</span><br><span class="line"><span class="built_in">console</span>.log(isIPhone6p);</span><br><span class="line"><span class="built_in">console</span>.log(isIPhoneX);</span><br><span class="line"><span class="built_in">console</span>.log(isIPhoneXSMax);</span><br><span class="line"><span class="built_in">console</span>.log(isIPhoneXR);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*************************End*******************************/</span></span><br></pre></td></tr></table></figure>
+
+<p>原文链接:<a target="_blank" rel="noopener" href="https://www.baidu.com/">https:/www.baidu.com</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-hexo-指令大全"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/08/02/hexo-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/"
+    >hexo 指令大全</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/08/02/hexo-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="article-date">
+  <time datetime="2021-08-02T07:08:38.000Z" itemprop="datePublished">2021-08-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="本地启动hexo"><a href="#本地启动hexo" class="headerlink" title="本地启动hexo"></a>本地启动hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="创建一篇新文章"><a href="#创建一篇新文章" class="headerlink" title="创建一篇新文章"></a>创建一篇新文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="hexo部署"><a href="#hexo部署" class="headerlink" title="hexo部署"></a>hexo部署</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-路由的两种实现方式"
   class="article article-type-post"
   itemscope
@@ -431,7 +532,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>##一级标题</p>
+  <p>#一级标题</p>
 <h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h6 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a><em>斜体</em></h6><p><em>斜体2</em></p>
 <p><strong>粗体</strong></p>
 <p><strong>粗体2</strong></p>
