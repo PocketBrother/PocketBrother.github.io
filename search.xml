@@ -164,7 +164,7 @@
     <url>/2021/08/02/hexo-%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/</url>
     <content><![CDATA[<h2 id="本地启动hexo"><a href="#本地启动hexo" class="headerlink" title="本地启动hexo"></a>本地启动hexo</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <h2 id="创建一篇新文章"><a href="#创建一篇新文章" class="headerlink" title="创建一篇新文章"></a>创建一篇新文章</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="hexo部署"><a href="#hexo部署" class="headerlink" title="hexo部署"></a>hexo部署</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-部署"><a href="#hexo-部署" class="headerlink" title="hexo 部署"></a>hexo 部署</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 
 
@@ -220,6 +220,63 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> lcthref=location.href.replace(<span class="regexp">/openMyPrize=true/g</span>,<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(lcthref)</span><br><span class="line"><span class="built_in">window</span>.history.pushState(<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>,lcthref)</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>原文链接：[<a href="https://blog.csdn.net/qq_40028324/article/details/83268502]">https://blog.csdn.net/qq_40028324/article/details/83268502]</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo的安装与部署(有空就更新)</title>
+    <url>/2021/08/02/hexo%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%83%A8%E7%BD%B2-%E6%9C%89%E7%A9%BA%E5%B0%B1%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<h2 id="创建一篇新文章"><a href="#创建一篇新文章" class="headerlink" title="创建一篇新文章"></a>创建一篇新文章</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="本地启动hexo"><a href="#本地启动hexo" class="headerlink" title="本地启动hexo"></a>本地启动hexo</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="提交到github上"><a href="#提交到github上" class="headerlink" title="提交到github上"></a>提交到github上</h2><h3 id="第一步-把本地所有的文件都加入到暂存区"><a href="#第一步-把本地所有的文件都加入到暂存区" class="headerlink" title="第一步,把本地所有的文件都加入到暂存区"></a>第一步,把本地所有的文件都加入到暂存区</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<h3 id="第二步-把暂存区所有的文件都提交到版本库"><a href="#第二步-把暂存区所有的文件都提交到版本库" class="headerlink" title="第二步,把暂存区所有的文件都提交到版本库"></a>第二步,把暂存区所有的文件都提交到版本库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit -m &#39;这里随意填写注释&#39;</span><br></pre></td></tr></table></figure>
+<h3 id="第三步-把本地项目所在的的分支与远程的分支进行合并"><a href="#第三步-把本地项目所在的的分支与远程的分支进行合并" class="headerlink" title="第三步,把本地项目所在的的分支与远程的分支进行合并"></a>第三步,把本地项目所在的的分支与远程的分支进行合并</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push 分支名</span><br></pre></td></tr></table></figure>
+<h2 id="第四步-把hexo部署到线上"><a href="#第四步-把hexo部署到线上" class="headerlink" title="第四步,把hexo部署到线上"></a>第四步,把hexo部署到线上</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>原生JS取消默认事件和冒泡</title>
+    <url>/2021/08/05/%E5%8E%9F%E7%94%9FJS%E5%8F%96%E6%B6%88%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6%E5%92%8C%E5%86%92%E6%B3%A1/</url>
+    <content><![CDATA[<h1 id="JS取消默认事件和冒泡"><a href="#JS取消默认事件和冒泡" class="headerlink" title="JS取消默认事件和冒泡"></a>JS取消默认事件和冒泡</h1><h2 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡:"></a>阻止冒泡:</h2><p>w3c的方法是e.stopPropagation()，IE则是使用e.cancelBubble = true<br>stopPropagation也是事件对象(Event)的一个方法，作用是阻止目标元素的冒泡事件，但是会不阻止默认行为。什么是冒泡事件？如在一个按钮是绑定一个”click”事件，那么”click”事件会依次在它的父级元素中被触发 。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.event? <span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span> : e.stopPropagation();</span><br></pre></td></tr></table></figure>
+<h2 id="取消默认事件"><a href="#取消默认事件" class="headerlink" title="取消默认事件:"></a>取消默认事件:</h2><p>w3c的方法是e.preventDefault()，IE则是使用e.returnValue = false;<br>preventDefault它是事件对象(Event)的一个方法，作用是取消一个目标元素的默认行为。既然是说默认行为，当然是元素必须有默认行为才能被取消，如果元素本身就没有默认行为，调用当然就无效了。什么元素有默认行为呢？如链接<a>，提交按钮<input type=”submit”>等。当Event 对象的 cancelable为false时，表示没有默认行为，这时即使有默认行为，调用preventDefault也是不会起作用的。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//假定有链接&lt;a href=&quot;http://caibaojian.com/&quot; id=&quot;testA&quot; &gt;caibaojian.com&lt;/a&gt;</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.getElementById(<span class="string">&quot;testA&quot;</span>);</span><br><span class="line">a.onclick =<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(e.preventDefault)&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">window</span>.event.returnValue == <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="return-false的应用"><a href="#return-false的应用" class="headerlink" title="return false的应用"></a>return false的应用</h2><p>javascript的return false只会阻止默认行为，而是用jQuery的话则既阻止默认行为又防止对象冒泡。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//停止冒泡</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopBubble</span>(<span class="params">e</span>) </span>&#123; </span><br><span class="line">    <span class="comment">//如果提供了事件对象，则这是一个非IE浏览器 </span></span><br><span class="line">    <span class="keyword">if</span> ( e &amp;&amp; e.stopPropagation )&#123;</span><br><span class="line">        <span class="comment">//因此它支持W3C的stopPropagation()方法 </span></span><br><span class="line">        e.stopPropagation(); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//否则，我们需要使用IE的方式来取消事件冒泡 </span></span><br><span class="line">        <span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span>; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//阻止浏览器的默认行为 </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopDefault</span>(<span class="params"> e </span>) </span>&#123; </span><br><span class="line"><span class="comment">//阻止默认浏览器动作(W3C) </span></span><br><span class="line">    <span class="keyword">if</span> ( e &amp;&amp; e.preventDefault ) </span><br><span class="line">        e.preventDefault(); </span><br><span class="line">    <span class="comment">//IE中阻止函数器默认动作的方式 </span></span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="built_in">window</span>.event.returnValue = <span class="literal">false</span>; </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>scrollIntoView方法的使用</title>
+    <url>/2021/08/17/scrollIntoview%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>element.scrollIntoView()方法用于将调用他的元素滚动到浏览器窗口的可见区域,根据其他元素的布局,元素可能无法完全滚动到顶部或者底部,并且只作用在元素位于可滚动容器的内部.</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> element= <span class="built_in">document</span>.getElementById(<span class="string">&#x27;container&#x27;</span>);</span><br><span class="line"><span class="comment">//不传参</span></span><br><span class="line">element.scrollIntoView();</span><br><span class="line"><span class="comment">//布尔</span></span><br><span class="line">element.scrollIntoView(<span class="literal">false</span>);<span class="comment">//可选值[true,false]</span></span><br><span class="line"><span class="comment">//[true]元素的顶部将对齐到可滚动祖先的可见区域的顶部。对应于scrollIntoViewOptions: &#123;block: &quot;start&quot;, inline: &quot;nearest&quot;&#125;.</span></span><br><span class="line"><span class="comment">//[false]元素的底部将与可滚动祖先的可见区域的底部对齐。对应于scrollIntoViewOptions: &#123;block: &quot;end&quot;, inline: &quot;nearest&quot;&#125;。</span></span><br><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    behavior:<span class="string">&#x27;auto&#x27;</span>,<span class="comment">//定义过渡动画可选值[auto,smooth,instant]</span></span><br><span class="line">    block:<span class="string">&#x27;center&#x27;</span>,<span class="comment">//</span></span><br><span class="line">    inline:<span class="string">&#x27;nearest&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// 对象传参</span></span><br><span class="line">element.scrollIntoView(options)</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>本地与远程仓库密钥的绑定</title>
+    <url>/2022/03/02/%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%AF%86%E9%92%A5%E7%9A%84%E7%BB%91%E5%AE%9A/</url>
+    <content><![CDATA[<p>使用SSH公钥可以让你在你的电脑和 Gitee或者github 通讯的时候使用安全连接（Git的Remote要使用SSH地址）<br><strong>1.新建一个仓库</strong></p>
+<p>可以是gitee或者github仓库(github里的仓库是可以导入到github的)<br><strong>2.打开Git Bash控制台，输入下列命令：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.ssh  &#x2F;&#x2F;找到密钥保存的文件夹</span><br></pre></td></tr></table></figure>
+<p><strong>3.接着创建新的ssh 密钥</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen - t rsa -C &quot;密钥名称&quot;</span><br></pre></td></tr></table></figure>
+<p>完成后输入要保存密钥的文件名(可以跳过,但是创建多个密钥时文件名不可以一样)<br><strong>4.打印出生产的密钥</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;第三步设置的文件名.pub</span><br></pre></td></tr></table></figure>
+<p><strong>5.将密钥黏贴到gitee或者github中</strong><br>gitee公钥设置是在(点击头像=&gt;设置=&gt;安全设置=&gt;SSH公钥,粘贴后自动生成标题,点击确定即可)<br><strong>6.绑定远程仓库</strong><br>复制你仓库里的SHH,输入下面的命令并黏贴shh地址即可 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git romote add origin 你的SSH地址</span><br></pre></td></tr></table></figure>
+<p><strong>总结</strong><br>密钥是用于生成仓库SSH用的,而SSH就是你当前电脑与远程仓库进行绑定的地址,每个仓库都有自己的SSH地址,当你需要使用git与远程仓库进行绑定操作时,就需要使用到它,这样git就能够正确的访问到远程仓库了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote origin add &quot;SSH&quot; &#x2F;&#x2F;SSH就是仓库的SSH</span><br></pre></td></tr></table></figure>
+<p>参考文章 生成SSH公钥[<a href="https://gitee.com/help/articles/4181]">https://gitee.com/help/articles/4181]</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>配置webpack中dev.env.js、prod.env.js，解决不同命令下项目启动和打包到指定的环境</title>
+    <url>/2021/08/20/%E9%85%8D%E7%BD%AEwebpack%E4%B8%ADdev-env-js%E3%80%81prod-env-js%EF%BC%8C%E8%A7%A3%E5%86%B3%E4%B8%8D%E5%90%8C%E5%91%BD%E4%BB%A4%E4%B8%8B%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%92%8C%E6%89%93%E5%8C%85%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_20097569/article/details/82492819">原文链接</a></p>
 ]]></content>
   </entry>
 </search>

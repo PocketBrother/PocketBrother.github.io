@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     Hexo
+     口袋哥哥的学习播客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -51,7 +51,7 @@
       <img src="images/cover1.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">Hexo</a></h1>
+      <h1><a href="/">口袋哥哥的学习播客</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -157,6 +157,268 @@
     
     
     <article
+  id="post-本地与远程仓库密钥的绑定"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/03/02/%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%AF%86%E9%92%A5%E7%9A%84%E7%BB%91%E5%AE%9A/"
+    >本地与远程仓库密钥的绑定</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/03/02/%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%AF%86%E9%92%A5%E7%9A%84%E7%BB%91%E5%AE%9A/" class="article-date">
+  <time datetime="2022-03-02T06:55:23.000Z" itemprop="datePublished">2022-03-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>使用SSH公钥可以让你在你的电脑和 Gitee或者github 通讯的时候使用安全连接（Git的Remote要使用SSH地址）<br><strong>1.新建一个仓库</strong></p>
+<p>可以是gitee或者github仓库(github里的仓库是可以导入到github的)<br><strong>2.打开Git Bash控制台，输入下列命令：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;.ssh  &#x2F;&#x2F;找到密钥保存的文件夹</span><br></pre></td></tr></table></figure>
+<p><strong>3.接着创建新的ssh 密钥</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen - t rsa -C &quot;密钥名称&quot;</span><br></pre></td></tr></table></figure>
+<p>完成后输入要保存密钥的文件名(可以跳过,但是创建多个密钥时文件名不可以一样)<br><strong>4.打印出生产的密钥</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;第三步设置的文件名.pub</span><br></pre></td></tr></table></figure>
+<p><strong>5.将密钥黏贴到gitee或者github中</strong><br>gitee公钥设置是在(点击头像=&gt;设置=&gt;安全设置=&gt;SSH公钥,粘贴后自动生成标题,点击确定即可)<br><strong>6.绑定远程仓库</strong><br>复制你仓库里的SHH,输入下面的命令并黏贴shh地址即可 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git romote add origin 你的SSH地址</span><br></pre></td></tr></table></figure>
+<p><strong>总结</strong><br>密钥是用于生成仓库SSH用的,而SSH就是你当前电脑与远程仓库进行绑定的地址,每个仓库都有自己的SSH地址,当你需要使用git与远程仓库进行绑定操作时,就需要使用到它,这样git就能够正确的访问到远程仓库了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote origin add &quot;SSH&quot; &#x2F;&#x2F;SSH就是仓库的SSH</span><br></pre></td></tr></table></figure>
+<p>参考文章 生成SSH公钥[<a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4181]">https://gitee.com/help/articles/4181]</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-配置webpack中dev-env-js、prod-env-js，解决不同命令下项目启动和打包到指定的环境"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/08/20/%E9%85%8D%E7%BD%AEwebpack%E4%B8%ADdev-env-js%E3%80%81prod-env-js%EF%BC%8C%E8%A7%A3%E5%86%B3%E4%B8%8D%E5%90%8C%E5%91%BD%E4%BB%A4%E4%B8%8B%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%92%8C%E6%89%93%E5%8C%85%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E7%8E%AF%E5%A2%83/"
+    >配置webpack中dev.env.js、prod.env.js，解决不同命令下项目启动和打包到指定的环境</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/08/20/%E9%85%8D%E7%BD%AEwebpack%E4%B8%ADdev-env-js%E3%80%81prod-env-js%EF%BC%8C%E8%A7%A3%E5%86%B3%E4%B8%8D%E5%90%8C%E5%91%BD%E4%BB%A4%E4%B8%8B%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%92%8C%E6%89%93%E5%8C%85%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E7%8E%AF%E5%A2%83/" class="article-date">
+  <time datetime="2021-08-20T05:00:02.000Z" itemprop="datePublished">2021-08-20</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_20097569/article/details/82492819">原文链接</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-scrollIntoview的属性和用法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/08/17/scrollIntoview%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E7%94%A8%E6%B3%95/"
+    >scrollIntoView方法的使用</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/08/17/scrollIntoview%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E7%94%A8%E6%B3%95/" class="article-date">
+  <time datetime="2021-08-17T05:11:07.000Z" itemprop="datePublished">2021-08-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>element.scrollIntoView()方法用于将调用他的元素滚动到浏览器窗口的可见区域,根据其他元素的布局,元素可能无法完全滚动到顶部或者底部,并且只作用在元素位于可滚动容器的内部.</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element= <span class="built_in">document</span>.getElementById(<span class="string">&#x27;container&#x27;</span>);</span><br><span class="line"><span class="comment">//不传参</span></span><br><span class="line">element.scrollIntoView();</span><br><span class="line"><span class="comment">//布尔</span></span><br><span class="line">element.scrollIntoView(<span class="literal">false</span>);<span class="comment">//可选值[true,false]</span></span><br><span class="line"><span class="comment">//[true]元素的顶部将对齐到可滚动祖先的可见区域的顶部。对应于scrollIntoViewOptions: &#123;block: &quot;start&quot;, inline: &quot;nearest&quot;&#125;.</span></span><br><span class="line"><span class="comment">//[false]元素的底部将与可滚动祖先的可见区域的底部对齐。对应于scrollIntoViewOptions: &#123;block: &quot;end&quot;, inline: &quot;nearest&quot;&#125;。</span></span><br><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">    behavior:<span class="string">&#x27;auto&#x27;</span>,<span class="comment">//定义过渡动画可选值[auto,smooth,instant]</span></span><br><span class="line">    block:<span class="string">&#x27;center&#x27;</span>,<span class="comment">//</span></span><br><span class="line">    inline:<span class="string">&#x27;nearest&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// 对象传参</span></span><br><span class="line">element.scrollIntoView(options)</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-原生JS取消默认事件和冒泡"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/08/05/%E5%8E%9F%E7%94%9FJS%E5%8F%96%E6%B6%88%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6%E5%92%8C%E5%86%92%E6%B3%A1/"
+    >原生JS取消默认事件和冒泡</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/08/05/%E5%8E%9F%E7%94%9FJS%E5%8F%96%E6%B6%88%E9%BB%98%E8%AE%A4%E4%BA%8B%E4%BB%B6%E5%92%8C%E5%86%92%E6%B3%A1/" class="article-date">
+  <time datetime="2021-08-05T15:22:06.000Z" itemprop="datePublished">2021-08-05</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="JS取消默认事件和冒泡"><a href="#JS取消默认事件和冒泡" class="headerlink" title="JS取消默认事件和冒泡"></a>JS取消默认事件和冒泡</h1><h2 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡:"></a>阻止冒泡:</h2><p>w3c的方法是e.stopPropagation()，IE则是使用e.cancelBubble = true<br>stopPropagation也是事件对象(Event)的一个方法，作用是阻止目标元素的冒泡事件，但是会不阻止默认行为。什么是冒泡事件？如在一个按钮是绑定一个”click”事件，那么”click”事件会依次在它的父级元素中被触发 。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.event? <span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span> : e.stopPropagation();</span><br></pre></td></tr></table></figure>
+<h2 id="取消默认事件"><a href="#取消默认事件" class="headerlink" title="取消默认事件:"></a>取消默认事件:</h2><p>w3c的方法是e.preventDefault()，IE则是使用e.returnValue = false;<br>preventDefault它是事件对象(Event)的一个方法，作用是取消一个目标元素的默认行为。既然是说默认行为，当然是元素必须有默认行为才能被取消，如果元素本身就没有默认行为，调用当然就无效了。什么元素有默认行为呢？如链接<a>，提交按钮<input type=”submit”>等。当Event 对象的 cancelable为false时，表示没有默认行为，这时即使有默认行为，调用preventDefault也是不会起作用的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假定有链接&lt;a href=&quot;http://caibaojian.com/&quot; id=&quot;testA&quot; &gt;caibaojian.com&lt;/a&gt;</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.getElementById(<span class="string">&quot;testA&quot;</span>);</span><br><span class="line">a.onclick =<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(e.preventDefault)&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">window</span>.event.returnValue == <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="return-false的应用"><a href="#return-false的应用" class="headerlink" title="return false的应用"></a>return false的应用</h2><p>javascript的return false只会阻止默认行为，而是用jQuery的话则既阻止默认行为又防止对象冒泡。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//停止冒泡</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopBubble</span>(<span class="params">e</span>) </span>&#123; </span><br><span class="line">    <span class="comment">//如果提供了事件对象，则这是一个非IE浏览器 </span></span><br><span class="line">    <span class="keyword">if</span> ( e &amp;&amp; e.stopPropagation )&#123;</span><br><span class="line">        <span class="comment">//因此它支持W3C的stopPropagation()方法 </span></span><br><span class="line">        e.stopPropagation(); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//否则，我们需要使用IE的方式来取消事件冒泡 </span></span><br><span class="line">        <span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span>; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//阻止浏览器的默认行为 </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopDefault</span>(<span class="params"> e </span>) </span>&#123; </span><br><span class="line"><span class="comment">//阻止默认浏览器动作(W3C) </span></span><br><span class="line">    <span class="keyword">if</span> ( e &amp;&amp; e.preventDefault ) </span><br><span class="line">        e.preventDefault(); </span><br><span class="line">    <span class="comment">//IE中阻止函数器默认动作的方式 </span></span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="built_in">window</span>.event.returnValue = <span class="literal">false</span>; </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-hexo的安装与部署-有空就更新"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/08/02/hexo%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%83%A8%E7%BD%B2-%E6%9C%89%E7%A9%BA%E5%B0%B1%E6%9B%B4%E6%96%B0/"
+    >hexo的安装与部署(有空就更新)</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/08/02/hexo%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%83%A8%E7%BD%B2-%E6%9C%89%E7%A9%BA%E5%B0%B1%E6%9B%B4%E6%96%B0/" class="article-date">
+  <time datetime="2021-08-02T11:11:02.000Z" itemprop="datePublished">2021-08-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="创建一篇新文章"><a href="#创建一篇新文章" class="headerlink" title="创建一篇新文章"></a>创建一篇新文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="本地启动hexo"><a href="#本地启动hexo" class="headerlink" title="本地启动hexo"></a>本地启动hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="提交到github上"><a href="#提交到github上" class="headerlink" title="提交到github上"></a>提交到github上</h2><h3 id="第一步-把本地所有的文件都加入到暂存区"><a href="#第一步-把本地所有的文件都加入到暂存区" class="headerlink" title="第一步,把本地所有的文件都加入到暂存区"></a>第一步,把本地所有的文件都加入到暂存区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<h3 id="第二步-把暂存区所有的文件都提交到版本库"><a href="#第二步-把暂存区所有的文件都提交到版本库" class="headerlink" title="第二步,把暂存区所有的文件都提交到版本库"></a>第二步,把暂存区所有的文件都提交到版本库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#39;这里随意填写注释&#39;</span><br></pre></td></tr></table></figure>
+<h3 id="第三步-把本地项目所在的的分支与远程的分支进行合并"><a href="#第三步-把本地项目所在的的分支与远程的分支进行合并" class="headerlink" title="第三步,把本地项目所在的的分支与远程的分支进行合并"></a>第三步,把本地项目所在的的分支与远程的分支进行合并</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push 分支名</span><br></pre></td></tr></table></figure>
+<h2 id="第四步-把hexo部署到线上"><a href="#第四步-把hexo部署到线上" class="headerlink" title="第四步,把hexo部署到线上"></a>第四步,把hexo部署到线上</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-判断苹果手机型号"
   class="article article-type-post"
   itemscope
@@ -234,7 +496,7 @@
        
   <h2 id="本地启动hexo"><a href="#本地启动hexo" class="headerlink" title="本地启动hexo"></a>本地启动hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <h2 id="创建一篇新文章"><a href="#创建一篇新文章" class="headerlink" title="创建一篇新文章"></a>创建一篇新文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="hexo部署"><a href="#hexo部署" class="headerlink" title="hexo部署"></a>hexo部署</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-部署"><a href="#hexo-部署" class="headerlink" title="hexo 部署"></a>hexo 部署</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 
 
@@ -505,128 +767,14 @@
 </article>
 
     
-    <article
-  id="post-Markdown-语法汇总"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/03/24/Markdown-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB/"
-    >Markdown 语法汇总</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/03/24/Markdown-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB/" class="article-date">
-  <time datetime="2021-03-24T05:11:07.000Z" itemprop="datePublished">2021-03-24</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>#一级标题</p>
-<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h6 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a><em>斜体</em></h6><p><em>斜体2</em></p>
-<p><strong>粗体</strong></p>
-<p><strong>粗体2</strong></p>
-<p><em><strong>粗斜体</strong></em></p>
-<hr>
-<p><del>删除线</del></p>
-<p><u>带下划线文本</u></p>
-<p>创建脚注格式类似这样 <a href="%E8%84%9A%E6%B3%A8%E5%86%85%E5%AE%B9">^脚注</a>。</p>
-<ol>
-<li><p>有序列表</p>
-</li>
-<li><p>有序列表</p>
-</li>
-</ol>
-<ul>
-<li>无序列表</li>
-<li>无序列表</li>
-</ul>
-<ol>
-<li>有序列表嵌套<ul>
-<li>第一项嵌套第一个元素</li>
-<li>第一项嵌套第二个元素</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>区块1</p>
-<blockquote>
-<p>区块1-1</p>
-<blockquote>
-<p>区块1-3</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>123<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这是一个<a target="_blank" rel="noopener" href="https://www.baidu.com/">链接</a></p>
-<p>直接使用链接地址<a href="ttps:/www.baidu.com">ttps:/www.baidu.com</a></p>
-<p>这个链接用BD作为网址变量<a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a></p>
-<p>![alt 图片属性文本](E:\image素材\120201 METTER +智能计量 智慧迈拓2.png)</p>
-<p>![alt 图片属性文本](E:\image素材\logo_画板 1 副本 (2).png “迈拓”)</p>
-<p>个链接用 1 作为网址变量 <a target="_blank" rel="noopener" href="http://static.runoob.com/images/runoob-logo.png">RUNOOB</a></p>
-<img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
-
-<table>
-<thead>
-<tr>
-<th align="left">表头</th>
-<th align="center">表头</th>
-<th align="right">表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">单元格1</td>
-<td align="center">单元格1</td>
-<td align="right">单元格</td>
-</tr>
-<tr>
-<td align="left">单元格1</td>
-<td align="center">单元格1</td>
-<td align="right">单元格</td>
-</tr>
-</tbody></table>
-<ol>
-<li>横向流程图源码格式：<br>graph LR<br>A[方形] –&gt;B(圆角)<br> B –&gt; C{条件}<br> C –&gt;|a=1| D[结果1]<br> C –&gt;|a=2| E[结果2]<br> F[横向流程图]<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">2. 竖向流程图源码格式:</span><br><span class="line">​&#96;&#96;&#96;mermaid</span><br><span class="line">graph TD</span><br><span class="line">A[方形] --&gt; B(圆角)</span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line">    C --&gt; |a&#x3D;1| D[结果1]</span><br><span class="line">    C --&gt; |a&#x3D;2| E[结果2]</span><br><span class="line">    F[竖向流程图]</span><br></pre></td></tr></table></figure></li>
-<li>标准流程图源码格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始框</span><br><span class="line">op&#x3D;&gt;operation: 处理框</span><br><span class="line">cond&#x3D;&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1&#x3D;&gt;subroutine: 子流程</span><br><span class="line">io&#x3D;&gt;inputoutput: 输入输出框</span><br><span class="line">e&#x3D;&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure></li>
-<li>标准流程图源码格式（横向）：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始框</span><br><span class="line">op&#x3D;&gt;operation: 处理框</span><br><span class="line">cond&#x3D;&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1&#x3D;&gt;subroutine: 子流程</span><br><span class="line">io&#x3D;&gt;inputoutput: 输入输出框</span><br><span class="line">e&#x3D;&gt;end: 结束框</span><br><span class="line">st(right)-&gt;op(right)-&gt;cond</span><br><span class="line">cond(yes)-&gt;io(bottom)-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure></li>
-<li>UML时序图源码样例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br></pre></td></tr></table></figure></li>
-<li>UML时序图源码复杂样例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Title: 标题：复杂使用</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象B-&gt;小三: 你好吗</span><br><span class="line">小三--&gt;&gt;对象A: 对象B找我了</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">Note over 小三,对象B: 我们是朋友</span><br><span class="line">participant C</span><br><span class="line">Note right of C: 没人陪我玩</span><br></pre></td></tr></table></figure></li>
-<li>UML标准时序图样例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头</span><br><span class="line">  sequenceDiagram</span><br><span class="line">    participant 张三</span><br><span class="line">    participant 李四</span><br><span class="line">    张三-&gt;王五: 王五你好吗？</span><br><span class="line">    loop 健康检查</span><br><span class="line">        王五-&gt;王五: 与疾病战斗</span><br><span class="line">    end</span><br><span class="line">    Note right of 王五: 合理 食物 &lt;br&#x2F;&gt;看医生...</span><br><span class="line">    李四--&gt;&gt;张三: 很好!</span><br><span class="line">    王五-&gt;李四: 你怎么样?</span><br><span class="line">    李四--&gt;王五: 很好!</span><br></pre></td></tr></table></figure></li>
-<li>甘特图样例:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">%% 语法示例</span><br><span class="line">        gantt</span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line">        title 软件开发甘特图</span><br><span class="line">        section 设计</span><br><span class="line">        需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">        原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">        UI设计                     :         des3, after des2, 5d</span><br><span class="line">    未来任务                     :         des4, after des3, 5d</span><br><span class="line">        section 开发</span><br><span class="line">        学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">        设计框架                             :crit, done, after des2, 2d</span><br><span class="line">        开发                                 :crit, active, 3d</span><br><span class="line">        未来任务                              :crit, 5d</span><br><span class="line">        耍                                   :2d</span><br><span class="line">        section 测试</span><br><span class="line">        功能测试                              :active, a1, after des3, 3d</span><br><span class="line">        压力测试                               :after a1  , 20h</span><br><span class="line">        测试报告                               : 48h</span><br></pre></td></tr></table></figure></li>
-</ol>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
   
 </section>
 </div>
@@ -636,8 +784,8 @@
     <ul>
       <li>
         Copyrights &copy;
-        2015-2021
-        <i class="ri-heart-fill heart_icon"></i> John Doe
+        2015-2022
+        <i class="ri-heart-fill heart_icon"></i> 口袋哥哥
       </li>
     </ul>
     <ul>
@@ -695,7 +843,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="images/ayer-side.svg" alt="口袋哥哥的学习播客"></a>
   </div>
   
   <ul class="nav nav-main">

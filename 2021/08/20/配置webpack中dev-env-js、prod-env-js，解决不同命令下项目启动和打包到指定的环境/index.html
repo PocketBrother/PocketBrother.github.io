@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Archives: 2021/4 |  口袋哥哥的学习播客
+    配置webpack中dev.env.js、prod.env.js，解决不同命令下项目启动和打包到指定的环境 |  口袋哥哥的学习播客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -39,68 +39,207 @@
       
     <main class="content on">
       <section class="outer">
-  
-  <ul class="ads">
+  <article
+  id="post-配置webpack中dev-env-js、prod-env-js，解决不同命令下项目启动和打包到指定的环境"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-        <li>
-            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/ezctH6FU">
-                <img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_1.jpg" width="300" alt="腾讯云限时秒杀">
-            </a>
-        </li>
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
-                <img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_2.jpg" width="300" alt="云服务器全球购低至2折">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">2021/4</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2021" class="archive-year">2021</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/04/07/%E8%B7%AF%E7%94%B1%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/" class="archive-article-date">
-  <time datetime="2021-04-07T12:09:27.000Z" itemprop="datePublished">04/07</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/04/07/%E8%B7%AF%E7%94%B1%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/"
-    >路由的两种实现方式 hash和history</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  配置webpack中dev.env.js、prod.env.js，解决不同命令下项目启动和打包到指定的环境
+</h1>
  
 
     </header>
-    
-    
-  </div>
-</article>
-      
-      
+     
+    <div class="article-meta">
+      <a href="/2021/08/20/%E9%85%8D%E7%BD%AEwebpack%E4%B8%ADdev-env-js%E3%80%81prod-env-js%EF%BC%8C%E8%A7%A3%E5%86%B3%E4%B8%8D%E5%90%8C%E5%91%BD%E4%BB%A4%E4%B8%8B%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%92%8C%E6%89%93%E5%8C%85%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E7%8E%AF%E5%A2%83/" class="article-date">
+  <time datetime="2021-08-20T05:00:02.000Z" itemprop="datePublished">2021-08-20</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-  </div>
-  
-  
+      
+
+
 
   
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_20097569/article/details/82492819">原文链接</a></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://pocketbrother.github.io/blog/2021/08/20/%E9%85%8D%E7%BD%AEwebpack%E4%B8%ADdev-env-js%E3%80%81prod-env-js%EF%BC%8C%E8%A7%A3%E5%86%B3%E4%B8%8D%E5%90%8C%E5%91%BD%E4%BB%A4%E4%B8%8B%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%92%8C%E6%89%93%E5%8C%85%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E7%8E%AF%E5%A2%83/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2022/03/02/%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%AF%86%E9%92%A5%E7%9A%84%E7%BB%91%E5%AE%9A/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            本地与远程仓库密钥的绑定
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/08/17/scrollIntoview%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E7%94%A8%E6%B3%95/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">scrollIntoView方法的使用</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -262,6 +401,23 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
