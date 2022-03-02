@@ -11,7 +11,7 @@ hexo server
 ```
 hexo new "文件名"
 ```
-## hexo部署
+## hexo 部署
 ```
 hexo deploy
 ```
