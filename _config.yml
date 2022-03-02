@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://github.com/PocketBrother/blog
+url: https://pocketbrother.github.io/blog/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -102,9 +102,10 @@ theme: ayer
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+## repo 填的是仓库的SSH地址
 deploy:
   type: git
-  repo: git@github.com:PocketBrother/blog
+  repo: git@github.com:PocketBrother/blog.git
 
 # hexo-generator-searchdb
 search:
