@@ -105,7 +105,7 @@ theme: ayer
 ## repo 填的是仓库的SSH地址
 deploy:
   type: git
-  repo: git@github.com:PocketBrother/blog.git
+  repo: https://github.com/PocketBrother/blog.git
 
 # hexo-generator-searchdb
 search:
